@@ -1,10 +1,16 @@
-import React from 'react';
+import { Col, Row } from 'react-bootstrap';
+import storeItems from '../data/items.json';
 
 const Store = () => {
   return (
-    <div>
+    <>
       <h2>Store</h2>
-    </div>
+      <Row>
+        {storeItems.map((item) => (
+          <Col>{JSON.stringify(item)}</Col>
+        ))}
+      </Row>
+    </>
   );
 };
 
