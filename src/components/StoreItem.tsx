@@ -1,4 +1,4 @@
-import React from 'react';
+import { Card } from 'react-bootstrap';
 
 type StoreItemProps = {
   id: number;
@@ -9,9 +9,14 @@ type StoreItemProps = {
 
 const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
   return (
-    <div>
-      <h3>StoreItem</h3>
-    </div>
+    <Card>
+      <Card.Img
+        variant="top"
+        src={imgUrl}
+        height="200px"
+        style={{ objectFit: 'cover' }}
+      />
+    </Card>
   );
 };
 
